@@ -56,6 +56,7 @@ Message					11			<message_id>	<user_id>					If you decode message GUID, you'll g
 	- Replace last 8 digits to check sum
 	- Format string to guid like string
 	
+	
 	2.2. GUID decode
 	- Get guid and format it to hexadecimal string
 	- Get last 8 digits - check_sum_1

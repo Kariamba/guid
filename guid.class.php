@@ -9,8 +9,8 @@
 	*
 	* @license https://opensource.org/licenses/GPL-3.0 GNU Public License, version 3
 	*
+	* @package	OZ\
   * @version	1.0
-  * @package	OZ\
 	*/
 	
 	namespace OZ;
