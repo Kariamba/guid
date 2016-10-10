@@ -16,7 +16,7 @@
 	namespace OZ;
 	
 	abstract class GUID {
-		/** @var string $_key		Secreat key */
+		/** @var string $_key		Secret key */
 		private static $_key = '';
 		/**
 		*	@var array $_schema		Data schema, contains pairs 'filed => length':
