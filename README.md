@@ -5,14 +5,14 @@ Create GUID string and store upto 8 bytes of positive numeric data in hexadecima
 
 ## CONTENTS
 
-1.    CASES OF USAGE
-2.    PRINCIPLE OF GENERATION
-      2.1. GUID code
-      2.2. GUID decode
-3.    PUBLIC METHODS
-      3.1. GUID::init()
-      3.2. GUID::code()
-      3.3. GUID::decode()
+	1. CASES OF USAGE
+	2. PRINCIPLE OF GENERATION
+		2.1. GUID code
+		2.2. GUID decode
+	3. PUBLIC METHODS
+		3.1. GUID::init()
+		3.2. GUID::code()
+		3.3. GUID::decode()
 
 * * *
 
