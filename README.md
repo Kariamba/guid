@@ -7,12 +7,12 @@ Create GUID string and store upto 8 bytes of positive numeric data in hexadecima
 
 1. CASES OF USAGE
 2. PRINCIPLE OF GENERATION
-	2.1. GUID code
-	2.2. GUID decode
+2.1. GUID code
+2.2. GUID decode
 3. PUBLIC METHODS
-	3.1. GUID::init()
-	3.2. GUID::code()
-	3.3. GUID::decode()
+3.1. GUID::init()
+3.2. GUID::code()
+3.3. GUID::decode()
 
 * * *
 
@@ -33,11 +33,12 @@ Schema of GUID (for more detail see section 3.1.):
 	?>
 
 	GUID generation table:
-	**Entity				type		id_master			id_second					Comment**
-	Comapny					1				<company_id>	0
-	User						2				<user_id>			<company_id>			If you decode user GUID, you'll get both userID and companyID.
-	Messages group	10			<user_id1>		<user_id2>				GUID of chat room. It's good idea to make user_id1 lower than user_id2.
-	Message					11			<message_id>	<user_id>					If you decode message GUID, you'll get both messageID and userID (author).
+	Entity          type  id_master     id_second     Comment
+	----------------------------------------------------------------------------------------------------------------------------------
+	Comapny         1     <company_id>  0
+	User            2     <user_id>     <company_id>  If you decode user GUID, you'll get both userID and companyID.
+	Messages group  10    <user_id1>    <user_id2>    GUID of chat room. It's good idea to make user_id1 lower than user_id2.
+	Message         11    <message_id>  <user_id>     If you decode message GUID, you'll get both messageID and userID (author).
 
 * * *
 
