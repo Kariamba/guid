@@ -40,6 +40,8 @@ Schema of GUID (for more detail see section 3.1.):
 	Messages group  10    <user_id1>    <user_id2>    GUID of chat room. It's good idea to make user_id1 lower than user_id2.
 	Message         11    <message_id>  <user_id>     If you decode message GUID, you'll get both messageID and userID (author).
 
+Also you can use GUID for sharding your database.
+	
 * * *
 
 ## 2. PRINCIPLE OF GENERATION
