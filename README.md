@@ -51,7 +51,7 @@ Also you can use GUID for sharding your database.
 - Get an array of data.
 - Convert all values from DEC to HEX and normalize to its lengths (add zeros to make proper length)
 - Create data string (implode all normalized values to one string)
-- Normolize data string to length of 16 digits (add zeros to make proper length)
+- Normalize data string to length of 16 digits (add zeros to make proper length)
 - Get cehck sum of data string - CRC32 based on custom polynomials (gets from your secret key)
 - Add check sum to data string
 - Get hash - md5() of check sum
@@ -82,12 +82,14 @@ GUID class is abstract, it provides 3 public and static methods.
 Initialization of class. Should be called before other methods.
 
 $schema - associated array of data schema. Contains pairs 'filed => length':
+
 filed - any valid associated array key.
+
 lenght - int value, length of field in HEX digits:
-1 - field could contain one HEX digit (0-15 DEC values);
-2 - field could contain two HEX digit (0-255 DEC values);
-...
-Total length of all fields should be 16 digits (8 bytes).
+	1 - field could contain one HEX digit (0-15 DEC values);
+	2 - field could contain two HEX digit (0-255 DEC values);
+	...
+	Total length of all fields should be 16 digits (8 bytes).
 
 $key - your secret key.
 
