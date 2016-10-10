@@ -1,6 +1,12 @@
 # GUID
-GUID generator, which allow to store some data in GUID (code and decode).
-Create GUID string and store upto 8 bytes of positive numeric data in hexadecimal representation in it.
+
+The class can generate a unique identifier from some data values according to the schema fields and encodes them using the secret key.
+
+It can also take a previously generated GUID and decode it to extract the original encoded data using the same key.
+
+GUID could store upto 8 bytes of positive numeric data.
+
+PHP Tested: 5.6.19, 7.0.11
 
 
 ## CONTENTS
@@ -16,13 +22,16 @@ Create GUID string and store upto 8 bytes of positive numeric data in hexadecima
 
 * * *
 
+
 ## 1. CASES OF USAGE
 
 You can use it fo generate unique identifiers, which store some data.
+
 It is useful for shards of huge database. It can be used as key field for sharding logic also.
 
-Some times it's good idea to store some relations in GUID. For example:
-Schema of GUID (for more detail see section 3.1.):
+Some times it's good idea to store some relations in GUID.
+
+For example, schema of GUID (for more detail see section 3.1.):
 
 	<?php
 	  $schema = array(
@@ -39,10 +48,9 @@ Schema of GUID (for more detail see section 3.1.):
 	User            2     <user_id>     <company_id>  If you decode user GUID, you'll get both userID and companyID.
 	Messages group  10    <user_id1>    <user_id2>    GUID of chat room. It's good idea to make user_id1 lower than user_id2.
 	Message         11    <message_id>  <user_id>     If you decode message GUID, you'll get both messageID and userID (author).
-
-Also you can use GUID for sharding your database.
 	
 * * *
+
 
 ## 2. PRINCIPLE OF GENERATION
 
@@ -72,6 +80,7 @@ Also you can use GUID for sharding your database.
 - Conver all values from HEX to DEC
 
 * * *
+
 
 ## 3. PUBLIC METHODS
 
@@ -118,8 +127,8 @@ Examples of schemas:
 Generates GUID using $data.
 
 $data - associated array. Keys of array equal to data schema. Values - exact value of the field.
-If you skip some keys, they will get 0 values.
-If you use values lager than described in schema, they will be trancated. For examle:
+
+If you skip some keys, they will get 0 values. If you use values lager than described in schema, they will be trancated. For examle:
 
 	<?php
 	  $schema = array(
