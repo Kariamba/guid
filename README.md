@@ -25,11 +25,11 @@ Some times it's good idea to store some relations in GUID. For example:
 Schema of GUID (for more detail see section 3.1.):
 
 	<?php
-		$schema = array(
-			'type' => 2,
-			'id_master' => 6,
-			'id_second' => 6
-		);
+	  $schema = array(
+	    'type' => 2,
+	    'id_master' => 6,
+	    'id_second' => 6
+	  );
 	?>
 
 	GUID generation table:
@@ -92,20 +92,20 @@ $key - your secret key.
 Examples of schemas:
 
 	<?php
-		$schema = array(
-			'type' => 2,				/* type of GUID, contain values 0 - 255 */
-			'id_master' => 6,		/* id field, contain values 0 - 16777215 */
-			'id_second' => 6		/* id field, contain values 0 - 16777215 */
-		);
+	  $schema = array(
+	    'type' => 2,       /* type of GUID, contain values 0 - 255 */
+	    'id_master' => 6,  /* id field, contain values 0 - 16777215 */
+	    'id_second' => 6   /* id field, contain values 0 - 16777215 */
+	  );
 		
-		$schema = array(
-			'type' => 1,				/* type of GUID, contain values 0 - 15 */
-			'id_1' => 4,				/* id field, contain values 0 - 65535 */
-			'id_2' => 4,				/* id field, contain values 0 - 65535 */
-			'id_3' => 4,				/* id field, contain values 0 - 65535 */
-			'param' => 2,				/* some param field, contain values 0 - 255 */
-			'flags' => 1				/* flags field, contain 4 flags in dec 0 - 15 (0000, 0001, 0010, ..., 1111) */
-		);
+	  $schema = array(
+	    'type' => 1,       /* type of GUID, contain values 0 - 15 */
+	    'id_1' => 4,       /* id field, contain values 0 - 65535 */
+	    'id_2' => 4,       /* id field, contain values 0 - 65535 */
+	    'id_3' => 4,       /* id field, contain values 0 - 65535 */
+	    'param' => 2,      /* some param field, contain values 0 - 255 */
+	    'flags' => 1       /* flags field, contain 4 flags in dec 0 - 15 (0000, 0001, 0010, ..., 1111) */
+	  );
 	?>
 
 	
@@ -118,9 +118,9 @@ If you skip some keys, they will get 0 values.
 If you use values lager than described in schema, they will be trancated. For examle:
 
 	<?php
-		$schema = array(
-			'type' => 1 /* values from 0 - 15*/
-		);
+	  $schema = array(
+	    'type' => 1 /* values from 0 - 15*/
+	  );
 	?>
 	Type value 300 (HEX: 0x12C) will be trancated to 12 (HEX: 0xC).
 
